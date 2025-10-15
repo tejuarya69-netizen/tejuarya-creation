@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ToyVerse — Playful Toys for Everyone</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff7ac3'/%3E%3Cpath d='M22 26h20v12H22z' fill='white'/%3E%3Ccircle cx='26' cy='22' r='4' fill='white'/%3E%3Ccircle cx='38' cy='22' r='4' fill='white'/%3E%3C/svg%3E" />
+</head>
+<body>
+	<header class="site-header" role="banner">
+		<nav class="navbar" aria-label="Primary">
+			<a href="#/home" class="brand" aria-label="ToyVerse home">
+				<span class="brand-logo" aria-hidden="true">🎁</span>
+				<span class="brand-text">ToyVerse</span>
+			</a>
+			<ul class="nav-links" role="menubar">
+				<li role="none"><a role="menuitem" href="#/home" class="link">Home</a></li>
+				<li role="none" class="has-mega">
+					<a role="menuitem" href="#/categories" class="link" aria-haspopup="true" aria-expanded="false">Categories</a>
+					<div class="mega" role="dialog" aria-label="Categories">
+						<div class="mega-grid">
+							<a href="#/categories/STEM" class="mega-item">🔬 STEM</a>
+							<a href="#/categories/Plush" class="mega-item">🧸 Plush</a>
+							<a href="#/categories/Outdoor" class="mega-item">🌳 Outdoor</a>
+							<a href="#/categories/Puzzles" class="mega-item">🧩 Puzzles</a>
+						</div>
+					</div>
+				</li>
+				<li role="none"><a role="menuitem" href="#/about" class="link">About</a></li>
+				<li role="none"><a role="menuitem" href="#/cart" class="link cart-link"><span class="icon" aria-hidden="true">🛒</span><span id="cartCount" class="badge">0</span></a></li>
+			</ul>
+			<div class="nav-actions">
+				<label class="search" aria-label="Search products">
+					<span class="sr-only">Search</span>
+					<input id="searchInput" type="search" placeholder="Search toys..." autocomplete="off" />
+					<button id="clearSearch" class="icon-btn" aria-label="Clear search" title="Clear"><span aria-hidden="true">✕</span></button>
+				</label>
+				<select id="sortSelect" class="select" aria-label="Sort products">
+					<option value="popular">Popular</option>
+					<option value="price-asc">Price: Low to High</option>
+					<option value="price-desc">Price: High to Low</option>
+					<option value="new">Newest</option>
+				</select>
+				<button id="themeToggle" class="icon-btn" aria-pressed="false" aria-label="Toggle dark mode"><span class="theme-icon" aria-hidden="true">🌞</span></button>
+			</div>
+		</nav>
+	</header>
+
+	<main id="app" class="site-main" aria-live="polite" aria-busy="false">
+		<!-- Routed content will be injected here -->
+	</main>
+
+	<footer class="site-footer">
+		<div class="footer-content">
+			<div>
+				<div class="brand mini"><span aria-hidden="true">🎁</span> ToyVerse</div>
+				<p class="muted">Play well, grow well. © <span id="year"></span></p>
+			</div>
+			<ul class="footer-links">
+				<li><a href="#/about" class="link">About</a></li>
+				<li><a href="#/home#care" class="link">Care</a></li>
+				<li><a href="#/home#shipping" class="link">Shipping</a></li>
+				<li><a href="#/home#contact" class="link">Contact</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+	<script src="script.js" defer></script>
+</body>
+</html>
